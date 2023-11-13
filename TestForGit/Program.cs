@@ -1,3 +1,35 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿while (true)
+{
+    Console.WriteLine("Первое число.");
+    var firstNumber = Convert.ToDouble(Console.ReadLine());
 
-Console.WriteLine("Hello, World!");
+    Console.WriteLine("Математическая операция:\n +\n -\n *\n /\n");
+    var operation = Console.ReadLine();
+
+    Console.WriteLine("Второе число.");
+    var secondNumber = Convert.ToDouble(Console.ReadLine());
+
+    double result;
+    switch (operation)
+    {
+        case "+":
+            result = firstNumber + secondNumber;
+            Console.WriteLine("Результат: " + result);
+            break;
+        case "-":
+            result = firstNumber - secondNumber;
+            Console.WriteLine("Результат: " + result);
+            break;
+        case "*":
+            result = firstNumber * secondNumber;
+            Console.WriteLine("Результат: " + result);
+            break;
+        case "/":
+            result = firstNumber / secondNumber;
+            Console.WriteLine("Результат: " + result);
+            break;
+        default:
+            Console.WriteLine("Выбрана неверная операция.");
+            break;
+    }
+}
